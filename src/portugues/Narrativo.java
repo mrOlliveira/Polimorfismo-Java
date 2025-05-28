@@ -1,19 +1,18 @@
-package portugues;
+package Portugues;
 
 public class Narrativo extends GeneroTextual {
 
-    public Narrativo(String titulo, String conteudo) {
-        super(titulo, conteudo);
+    public Narrativo(String conteudo) {
+        super(conteudo);
     }
 
     @Override
     public void apresentarCaracteristicas() {
-        System.out.println("Gênero Narrativo: apresenta enredo, personagens e tempo.");
+        System.out.println("Gênero Narrativo: apresenta enredo, personagens e tempo");
     }
 
     @Override
     public void exibirExemplo() {
-        System.out.println("Título: " + titulo);
-        System.out.println("Exemplo: " + conteudo);
+        System.out.println("Exemplo: " + "João investigou os sons na mansão...");
     }
 }

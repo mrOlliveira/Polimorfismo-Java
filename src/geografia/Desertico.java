@@ -1,9 +1,10 @@
-package geografia;
+package Geografia;
 
 public class Desertico extends Clima {
 
     public Desertico(String regiao) {
         super(regiao);
+
     }
 
     @Override

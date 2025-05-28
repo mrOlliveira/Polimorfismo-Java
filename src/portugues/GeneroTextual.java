@@ -1,11 +1,9 @@
-package portugues;
+package Portugues;
 
 public abstract class GeneroTextual {
-    protected String titulo;
-    protected String conteudo;
+    String conteudo;
 
-    public GeneroTextual(String titulo, String conteudo) {
-        this.titulo = titulo;
+    public GeneroTextual(String conteudo) {
         this.conteudo = conteudo;
     }
 

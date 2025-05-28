@@ -1,4 +1,4 @@
-package matematica;
+package Matematica;
 
 public abstract class FormaTrigonometrica {
     protected double angulo;
@@ -7,6 +7,7 @@ public abstract class FormaTrigonometrica {
         this.angulo = angulo;
     }
 
+    public abstract void exibirExemplo();
     public abstract void calcular();
     public abstract void exibirResultado();
 }
