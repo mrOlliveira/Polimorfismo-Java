@@ -33,8 +33,9 @@ Funcionalidades
 ## 🔧 Como Executar
 
 1. Clone o repositório:
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-2. Abra o projeto em sua IDE Java preferida (IntelliJ, VSCode ou NetBeans).
+   ----bash
+   git clone https://github.com/mrOlliveira/Polimorfismo-Java
+3. Abra o projeto em sua IDE Java preferida (IntelliJ, VSCode ou NetBeans).
 
 3.compile os arquivos com "javac Main.java" (necessaria compilação para evitar problemas com versionamento de código)
 
