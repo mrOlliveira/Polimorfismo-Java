@@ -1,0 +1,6 @@
+{
+    "source_directory": "src",
+    "output_directory": "bin",
+    "compiler_options": ["-g", "-encoding", "UTF-8"]
+  }
+  
