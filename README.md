@@ -26,7 +26,6 @@ Funcionalidades
 - ✔️ **Abstração**
 - ✔️ **Encapsulamento**
 - ✔️ **Entrada dinâmica via `Scanner`**
-- ✔️ **Manipulação de listas (se houver)**
 - ✔️ **Menus interativos e tratamento de entradas inválidas**
 
 ---
