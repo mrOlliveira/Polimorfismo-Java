@@ -34,11 +34,12 @@ Funcionalidades
 ## 🔧 Como Executar
 
 1. Clone o repositório:
-   ```bash
    git clone https://github.com/seu-usuario/seu-repositorio.git
-2. Abra o projeto em sua IDE Java preferida (Eclipse, IntelliJ, VSCode ou NetBeans).
+2. Abra o projeto em sua IDE Java preferida (IntelliJ, VSCode ou NetBeans).
 
-3. Execute a classe Main.java.
+3.compile os arquivos com "javac Main.java" (necessaria compilação para evitar problemas com versionamento de código)
 
-4. Siga o menu interativo no console.
+4. Execute a classe Main.java.
+
+5. Siga o menu interativo no console.
 
