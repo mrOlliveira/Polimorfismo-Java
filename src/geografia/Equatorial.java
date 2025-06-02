@@ -1,4 +1,4 @@
-package Geografia;
+package geografia;
 
 public class Equatorial extends Clima {
 

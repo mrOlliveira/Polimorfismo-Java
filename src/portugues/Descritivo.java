@@ -1,4 +1,4 @@
-package Portugues;
+package portugues;
 
 public class Descritivo extends GeneroTextual {
 

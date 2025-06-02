@@ -1,4 +1,4 @@
-package Matematica;
+package matematica;
 
 public class Cosseno extends FormaTrigonometrica {
     private double resultado;

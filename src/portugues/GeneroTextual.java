@@ -1,4 +1,4 @@
-package Portugues;
+package portugues;
 
 public abstract class GeneroTextual {
     String conteudo;

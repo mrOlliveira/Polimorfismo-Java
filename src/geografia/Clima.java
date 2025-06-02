@@ -1,4 +1,4 @@
-package Geografia;
+package geografia;
 
 public abstract class Clima {
     protected String regiao;
