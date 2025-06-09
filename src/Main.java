@@ -1,11 +1,9 @@
 import java.util.Scanner;
-import java.util.ArrayList;
 import portugues.*;
 import matematica.*;
 import geografia.*;
 
 public class Main {
-    private static ArrayList<String> historico = new ArrayList<>();
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -17,7 +15,6 @@ public class Main {
             System.out.println("2 - Matemática");
             System.out.println("3 - Geografia");
             System.out.println("4 - Praticar");
-            System.out.println("5 - Ver Histórico");
             System.out.println("0 - Sair");
             System.out.print("Escolha: ");
             
@@ -35,7 +32,6 @@ public class Main {
                 case 2 -> menuMatematica(sc);
                 case 3 -> menuGeografia(sc);
                 case 4 -> menuPraticar(sc);
-                case 5 -> exibirHistorico();
                 case 0 -> System.out.println("Até logo!");
                 default -> System.out.println("Opção inválida!");
             }
@@ -66,7 +62,6 @@ public class Main {
         if (genero != null) {
             genero.apresentarCaracteristicas();
             genero.exibirExemplo();
-            historico.add("Português - Gênero: " + escolha);
         }
     }
 
@@ -92,7 +87,6 @@ public class Main {
                     seno.calcular();
                     seno.exibirExemplo();
                     seno.exibirResultado();
-                    historico.add("Matemática - Seno de " + angulo + "° = " + seno.getResultado());
                     valido = true;
                 }
                 case "cosseno" -> {
@@ -100,7 +94,6 @@ public class Main {
                     cosseno.calcular();
                     cosseno.exibirExemplo();
                     cosseno.exibirResultado();
-                    historico.add("Matemática - Cosseno de " + angulo + "° = " + cosseno.getResultado());
                     valido = true;
                 }
                 case "tangente" -> {
@@ -108,7 +101,6 @@ public class Main {
                     tangente.calcular();
                     tangente.exibirExemplo();
                     tangente.exibirResultado();
-                    historico.add("Matemática - Tangente de " + angulo + "° = " + tangente.getResultado());
                     valido = true;
                 }
                 default -> {
@@ -138,21 +130,18 @@ public class Main {
                     Tropical clima = new Tropical(regiao);
                     clima.caracteristicas();
                     clima.descrever();
-                    historico.add("Geografia - Clima Tropical na região: " + regiao);
                     valido = true;
                 }
                 case "desértico", "desertico" -> {
                     Desertico clima = new Desertico(regiao);
                     clima.caracteristicas();
                     clima.descrever();
-                    historico.add("Geografia - Clima Desértico na região: " + regiao);
                     valido = true;
                 }
                 case "equatorial" -> {
                     Equatorial clima = new Equatorial(regiao);
                     clima.caracteristicas();
                     clima.descrever();
-                    historico.add("Geografia - Clima Equatorial na região: " + regiao);
                     valido = true;
                 }
                 default -> System.out.println("Opção inválida, tente novamente.");
@@ -179,7 +168,6 @@ public class Main {
                 String resposta = sc.nextLine();
                 String resultado = resposta.equalsIgnoreCase("c") ? "Correto!" : "Errado! É o dissertativo.";
                 System.out.println(resultado);
-                historico.add("Prática Português - Resposta: " + resposta + " - " + resultado);
             }
             case "matematica" -> {
                 System.out.println("\nQuanto é sen(30°)?");
@@ -188,7 +176,6 @@ public class Main {
                     double res = Double.parseDouble(sc.nextLine());
                     String resultado = Math.abs(res - 0.5) < 0.001 ? "Correto!" : "Errado! É 0.5";
                     System.out.println(resultado);
-                    historico.add("Prática Matemática - Resposta: " + res + " - " + resultado);
                 } catch (NumberFormatException e) {
                     System.out.println("Digite um número!");
                 }
@@ -202,20 +189,8 @@ public class Main {
                 String resposta = sc.nextLine();
                 String resultado = resposta.equalsIgnoreCase("c") ? "Correto!" : "Errado! É o tropical.";
                 System.out.println(resultado);
-                historico.add("Prática Geografia - Resposta: " + resposta + " - " + resultado);
             }
             default -> System.out.println("Matéria inválida!");
-        }
-    }
-
-    private static void exibirHistorico() {
-        System.out.println("\n=== HISTÓRICO DE ATIVIDADES ===");
-        if (historico.isEmpty()) {
-            System.out.println("Nenhuma atividade registrada ainda.");
-        } else {
-            for (String item : historico) {
-                System.out.println("- " + item);
-            }
         }
     }
 }
