@@ -158,37 +158,74 @@ public class Main {
         System.out.print("Sua escolha: ");
         
         String escolha = sc.nextLine().toLowerCase().trim();
-        switch (escolha) {
+         switch (escolha) {
             case "portugues" -> {
-                System.out.println("\nQual gênero apresenta argumentos?");
-                System.out.println("a) Narrativo");
-                System.out.println("b) Descritivo");
-                System.out.println("c) Dissertativo");
+                System.out.println("\n1) Qual gênero apresenta argumentos?");
+                System.out.println("a) Narrativo\nb) Descritivo\nc) Dissertativo");
                 System.out.print("Resposta: ");
-                String resposta = sc.nextLine();
-                String resultado = resposta.equalsIgnoreCase("c") ? "Correto!" : "Errado! É o dissertativo.";
-                System.out.println(resultado);
+                String r1 = sc.nextLine();
+                System.out.println(r1.equalsIgnoreCase("c") ? "Correto!" : "Errado! É o dissertativo.");
+
+                System.out.println("\n2) Qual tipo de texto foca em retratar características?");
+                System.out.println("a) Descritivo\nb) Narrativo\nc) Dissertativo");
+                System.out.print("Resposta: ");
+                String r2 = sc.nextLine();
+                System.out.println(r2.equalsIgnoreCase("a") ? "Correto!" : "Errado! É o descritivo.");
+
+                System.out.println("\n3) Qual gênero textual apresenta ações encadeadas com personagens?");
+                System.out.println("a) Dissertativo\nb) Narrativo\nc) Descritivo");
+                System.out.print("Resposta: ");
+                String r3 = sc.nextLine();
+                System.out.println(r3.equalsIgnoreCase("b") ? "Correto!" : "Errado! É o narrativo.");
             }
+
             case "matematica" -> {
-                System.out.println("\nQuanto é sen(30°)?");
+                System.out.println("\n1) Quanto é seno(30°)?");
                 System.out.print("Resposta: ");
                 try {
                     double res = Double.parseDouble(sc.nextLine());
-                    String resultado = Math.abs(res - 0.5) < 0.001 ? "Correto!" : "Errado! É 0.5";
-                    System.out.println(resultado);
+                    System.out.println(Math.abs(res - 0.5) < 0.01 ? "Correto!" : "Errado! É 0.5");
+                } catch (NumberFormatException e) {
+                    System.out.println("Digite um número!");
+                }
+
+                System.out.println("\n2) Quanto é cosseno(0°)?");
+                System.out.print("Resposta: ");
+                try {
+                    double res2 = Double.parseDouble(sc.nextLine());
+                    System.out.println(Math.abs(res2 - 1.0) < 0.01 ? "Correto!" : "Errado! É 1");
+                } catch (NumberFormatException e) {
+                    System.out.println("Digite um número!");
+                }
+
+                System.out.println("\n3) Quanto é tangente(60°)?");
+                System.out.print("Resposta: ");
+                try {
+                    double res3 = Double.parseDouble(sc.nextLine());
+                    System.out.println(Math.abs(res3 - 1.732) < 0.01 ? "Correto!" : "Errado! É 1.732");
                 } catch (NumberFormatException e) {
                     System.out.println("Digite um número!");
                 }
             }
+
             case "geografia" -> {
-                System.out.println("\nQual clima tem duas estações bem definidas?");
-                System.out.println("a) Desértico");
-                System.out.println("b) Equatorial");
-                System.out.println("c) Tropical");
+                System.out.println("\n1) Qual clima tem duas estações bem definidas?");
+                System.out.println("a) Desértico\nb) Equatorial\nc) Tropical");
                 System.out.print("Resposta: ");
-                String resposta = sc.nextLine();
-                String resultado = resposta.equalsIgnoreCase("c") ? "Correto!" : "Errado! É o tropical.";
-                System.out.println(resultado);
+                String r1 = sc.nextLine();
+                System.out.println(r1.equalsIgnoreCase("c") ? "Correto!" : "Errado! É o tropical.");
+
+                System.out.println("\n2) Qual clima apresenta altas temperaturas e chuvas o ano todo?");
+                System.out.println("a) Desértico\nb) Equatorial\nc) Tropical");
+                System.out.print("Resposta: ");
+                String r2 = sc.nextLine();
+                System.out.println(r2.equalsIgnoreCase("b") ? "Correto!" : "Errado! É o equatorial.");
+
+                System.out.println("\n3) Qual clima é caracterizado por baixíssima umidade e pouca precipitação?");
+                System.out.println("a) Desértico\nb) Equatorial\nc) Tropical");
+                System.out.print("Resposta: ");
+                String r3 = sc.nextLine();
+                System.out.println(r3.equalsIgnoreCase("a") ? "Correto!" : "Errado! É o desértico.");
             }
             default -> System.out.println("Matéria inválida!");
         }
